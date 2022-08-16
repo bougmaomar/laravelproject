@@ -1,0 +1,67 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+$primary: #607fc2;
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+.homecontainer{
+    height: 500px;
+    width: 70%;
+/*     border: black 1px solid; */
+    margin: auto;
+    text-align: center;
+}
+.antialiased{
+    
+}
+
+[data-tab-content]{
+    display: none;
+}
+
+.active[data-tab-content]{
+    display: block;
+}
+
+.tabs{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid black;
+
+}
+
+.tab{
+    cursor: pointer;
+    padding: 1%;
+    margin: 0.5%;
+    border-radius: 25%;
+}
+
+.tab.active{
+    background-color: #ccc;
+}
+
+.tab:hover {
+    background-color: #aaa;
+}
+
+.searchrow{
+    margin-top: 1%;
+}
+
+.searchbtn{
+    width: 100px;
+    color: white;
+}
+
+.searchcontainer{
+    border: #aaa 1px solid;
+    border-radius: 15px;
+    padding: 2%;
+}
