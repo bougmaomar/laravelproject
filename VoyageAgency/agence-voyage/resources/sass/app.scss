@@ -1,67 +1,252 @@
+//usign sass files
+@use 'infopage.scss';
+
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 $primary: #607fc2;
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
 
-.homecontainer{
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+} 
+.homecontainer {
     height: 500px;
     width: 70%;
-/*     border: black 1px solid; */
+    /*     border: black 1px solid; */
     margin: auto;
     text-align: center;
 }
-.antialiased{
-    
+.antialiased {
 }
 
-[data-tab-content]{
+[data-tab-content] {
     display: none;
 }
 
-.active[data-tab-content]{
+.active[data-tab-content] {
     display: block;
 }
 
-.tabs{
+[data-sidetab-content] {
+    display: none;
+}
+
+.active[data-sidetab-content] {
+    display: block;
+}
+
+[data-htab-content] {
+    display: none;
+}
+
+.active[data-htab-content] {
+    display: block;
+}
+
+.hcontainer{
+    width: 100%;
+}
+.htabs{
+    border-bottom: black 1px solid;
     display: flex;
     justify-content: space-around;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid black;
-
 }
 
-.tab{
+.htab{
+    cursor: pointer;
+    padding: 1%;
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid black;
+}
+
+.adminbarcontainer {
+    height: 100%;
+    width: 15%;
+    background-color: #262c41;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    margin-top: 55px;
+}
+
+.sidetab-content {
+    margin-left: 15%;
+}
+
+.sidetabs {
+    list-style-type: none;
+    color: white;
+    padding: 0;
+}
+
+.tab {
     cursor: pointer;
     padding: 1%;
     margin: 0.5%;
-    border-radius: 25%;
+    border-radius: 20%;
 }
 
-.tab.active{
+.sidetab {
+    cursor: pointer;
+    padding: 1.5%;
+}
+
+.sidetab.active {
     background-color: #ccc;
+}
+
+.sidetab:hover {
+    background-color: #aaa;
+    border: 1px solid rgb(22, 15, 15);
+}
+
+.htab.active {
+    background-color: #ccc;
+    border: 1px solid black;
+}
+
+.htab:hover {
+    background-color: #aaa;
+}
+
+.tab.active {
+    border: 1px solid #aaa;
 }
 
 .tab:hover {
     background-color: #aaa;
 }
 
-.searchrow{
+.searchrow {
     margin-top: 1%;
 }
 
-.searchbtn{
+.searchbtn {
     width: 100px;
     color: white;
 }
 
-.searchcontainer{
+.searchcontainer {
     border: #aaa 1px solid;
     border-radius: 15px;
     padding: 2%;
+}
+
+.filtercontainer{
+    border: 1px black solid;
+}
+
+.itemticketrow{
+    border: 1px black solid;
+    padding: 0;
+}
+
+.btnreservation{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.shopbodycontainer{
+    margin-top: 5%;
+    margin: 0 auto;
+}
+
+.container{
+    padding: 0;
+}
+
+.rightcol{
+    text-align: end;
+    position: relative;
+}
+
+.roomprice{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ticket{
+    position: relative;
+}
+
+.tstbtn{
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+}
+
+.img{
+    background-image: url(/public/images/img.jpg);
+    height:240px !important;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+}
+.card{
+    overflow-x: hidden;
+}
+
+.relative-div{
+    position: relative;
+    overflow-x: hidden;
+}
+.card-footer{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    background-color: transparent !important ;
+    border-top: 0 !important;
+}
+.btn-detail{
+    margin-right: 20px;
+    padding: 5px 13px;
+    background-color: rgba(255, 210, 128, 0.906);
+    border-radius: 5px;
+    border: none;
+}
+
+.footer{
+    height: 200px;
+    background-color: grey;
+    margin-top: auto;
+}
+
+.bordcol{
+    border: 1px solid black;
+}
+
+.reservebtn{
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: rgb(73, 73, 170);
+    color: white;
+    border-radius: 5px;
+    border: #aaa 1px solid;
+
 }

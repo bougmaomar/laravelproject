@@ -1,5 +1,5 @@
 <div class="searchcontainer">
-    <ul class="tabs">
+    <ul class="tabs mb-2">
         <li data-tab-target="#hebergement" class="active tab">Hebergement</li>
         <li data-tab-target="#Excursion" class="tab">Excursion</li>
         <li data-tab-target="#Visiteguidee" class="tab">Visite guidee</li>

@@ -21,8 +21,10 @@
     </head>
     <body class="antialiased">
         <x-navbar />
-        <div class="homecontainer">
+        <div class="container mt-5">
             <x-searchtab></x-searchtab>
+            
         </div>
+        <x-footer />
     </body>
 </html>
